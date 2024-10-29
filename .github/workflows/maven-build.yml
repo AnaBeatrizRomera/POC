@@ -14,6 +14,8 @@ on:
 
 jobs:
   build:
+    - name: Checkout
+      uses: actions/checkout@v4
     - name: Deploy to EC2
       run: |
         echo "${{secrets.key_G}}" >private_key && chmod 600 private_key
